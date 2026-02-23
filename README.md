@@ -22,3 +22,13 @@
 
 Projeto de implementação do jogo Battleship no âmbito da unidade curricular engenharia de software.
 
+O objetivo é afundar toda a frota inimiga antes do adversário.
+
+| Navio       | Nome (EN) | Tamanho | Quantidade |
+| ----------- | --------- | ------- | ---------- |
+| 🛳 Galeão    | Galleon  | 5       | 1          |
+| ⛵ Fragata  | Frigate   | 4       | 1          |
+| 🚢 Nau      | Carrack   | 3       | 2          |
+| 🚤 Caravela | Caravel   | 2       | 3          |
+| 🛶 Barca    | Barge     | 1       | 4          |
+
