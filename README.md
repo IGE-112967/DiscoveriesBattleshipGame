@@ -22,13 +22,22 @@
 
 Projeto de implementação do jogo Battleship no âmbito da unidade curricular engenharia de software.
 
-O objetivo é afundar toda a frota inimiga antes do adversário.
 
-| Navio       | Nome (EN) | Tamanho | Quantidade |
-| ----------- | --------- | ------- | ---------- |
-| 🛳 Galeão    | Galleon  | 5       | 1          |
-| ⛵ Fragata  | Frigate   | 4       | 1          |
-| 🚢 Nau      | Carrack   | 3       | 2          |
-| 🚤 Caravela | Caravel   | 2       | 3          |
-| 🛶 Barca    | Barge     | 1       | 4          |
-
+### Logic Flow
+```mermaid
+graph TD
+    A[🚀 Start Game] --> B[⚓ Place Fleet]
+    B --> C{✅ Valid Placement?}
+    C -- No --> B
+    C -- Yes --> D[🎯 Player Turn]
+    D --> E[💣 Fire 3 Shots]
+    E --> F{💥 Hit or Miss?}
+    F -- Hit --> G{🚢 Ship Sunk?}
+    F -- Miss --> H[🔄 Next Player]
+    G -- Yes --> I{🏴‍☠️ All Ships Sunk?}
+    G -- No --> H
+    I -- Yes --> J[🏆 Game Over]
+    I -- No --> H
+    H --> D
+```
+---
