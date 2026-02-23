@@ -30,5 +30,5 @@ O objetivo é afundar toda a frota inimiga antes do adversário.
 | ⛵ Fragata  | Frigate   | 4       | 1          |
 | 🚢 Nau      | Carrack   | 3       | 2          |
 | 🚤 Caravela | Caravel   | 2       | 3          |
-| 🛶 Barca    | Barge     | 1       | 4          |
+| 🛶 Barca    | Barge     | 1       | 5          |
 
