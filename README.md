@@ -28,7 +28,7 @@ Projeto de implementação do jogo "Batalha Naval" no âmbito da unidade curricu
 
 O objetivo é afundar toda a frota inimiga antes do adversário.
 
-###Frota Disponível
+### Frota Disponível
 
 | Navio       | Nome (EN) | Tamanho | Quantidade |
 | ----------- | --------- | ------- | ---------- |
