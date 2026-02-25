@@ -5,7 +5,6 @@
 ## 🌊 Índice
 - [Tripulação](#-tripulação)
 - [Jogo e regras](#-jogo-e-regras)
-- [Frota Disponível](#-frota-disponível)
 - [Logic Flow](#-logic-flow)
 
 ___
@@ -28,6 +27,8 @@ ___
 Projeto de implementação do jogo "Batalha Naval" no âmbito da unidade curricular Engenharia de Software.
 
 O objetivo é afundar toda a frota inimiga antes do adversário.
+
+###Frota Disponível
 
 | Navio       | Nome (EN) | Tamanho | Quantidade |
 | ----------- | --------- | ------- | ---------- |
