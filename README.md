@@ -1,13 +1,18 @@
 # Battleship Project
 
-## Grupo
-
-**Nickname do grupo:**  MidnightFleet
-
-
 ---
 
-## Membros do Grupo
+## 🌊 Índice
+- [Tripulação](#-tripulação)
+- [Jogo e regras](#-jogo-e-regras)
+- [Frota Disponível](#-frota-disponível)
+- [Logic Flow](#-logic-flow)
+
+___
+
+## 🚣 Tripulação
+
+### **Nome da embarcação:**  MidnightFleet
 
 | Curso | Número | Nome |
 |------|--------|------|
@@ -16,11 +21,11 @@
 | LIGE-PL | 122477 | Maria Frade |
 | LIGE-PL | 111111 | João Nicolau |
 
----
+___
 
-## Descrição
+## 🎮 Jogo e Regras
 
-Projeto de implementação do jogo Battleship no âmbito da unidade curricular engenharia de software.
+Projeto de implementação do jogo "Batalha Naval" no âmbito da unidade curricular Engenharia de Software.
 
 O objetivo é afundar toda a frota inimiga antes do adversário.
 
@@ -32,7 +37,9 @@ O objetivo é afundar toda a frota inimiga antes do adversário.
 | 🚤 Caravela | Caravel   | 2       | 3          |
 | 🛶 Barca    | Barge     | 1       | 5          |
 
-### Logic Flow
+<!-- meter regras -->
+
+### ⚓ Logic Flow
 ```mermaid
 graph TD
     A[🚀 Start Game] --> B[⚓ Place Fleet]
