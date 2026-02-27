@@ -6,14 +6,14 @@ Pergunta 1 — Pull request, merge e o grafo
 
 Pergunta: Veja o que aconteceu no grafo… comente o que viu no grafo, isto é, o que resultou do pull request e do merge.
 
-Resposta: (a tua resposta atual, mas já formatada corrido e limpa)
+Resposta: 
 No grafo de rede vê-se que o ramo do pull request foi criado a partir do main, ficando a linha do main e a linha do ramo separadas a partir de um certo commit; depois aparecem commits feitos no ramo do PR em paralelo, até que, quando o pull request é processado e feito o merge, as duas linhas voltam a convergir no main, normalmente através de um merge commit. O resultado é que as alterações do ramo do PR passam a fazer parte do histórico do main.
 
 Pergunta 2 — Product Owner e Product Backlog
 
 Pergunta: Considere que é o Product Owner dessa app. Que requisitos adicionais lhe faltam? Qual deverá ser o Product Backlog?
 
-Resposta: (a tua resposta, mas ligeiramente mais “backlog” e menos “explicativa”)
+Resposta: 
 Para além do básico, o backlog deve incluir: validações na colocação da frota (sem sobreposição, sem contacto, apenas horizontal/vertical e dentro do tabuleiro), gestão do turno com a regra dos 3 tiros, validação de jogadas (sem tiros repetidos/fora do tabuleiro), deteção de navios afundados e fim de jogo, visualização correta (tabuleiro próprio completo e do adversário apenas com acertos/água), persistência consistente em JSON (guardar e retomar), e melhorias de usabilidade (mensagens claras/ajuda, e opcionalmente IA e estatísticas).
 
 Pergunta 3 — GitHub Issues no Scrum (assumir, concluir, desistir)
