@@ -29,6 +29,7 @@ Pergunta: Diferenças entre trabalhar via web e via IDE? Em que situações é p
 
 Resposta:
 Via web (GitHub) é mais adequado para coordenação e colaboração: gestão de issues, acompanhamento do trabalho, discussão e code review em pull requests. Via IDE é mais adequado para desenvolvimento: escrever/refatorar código, correr e depurar, executar testes e resolver conflitos de merge, sendo preferível para alterações maiores antes de submeter um PR.
+
 ---
 
 ## 🌊 Índice
