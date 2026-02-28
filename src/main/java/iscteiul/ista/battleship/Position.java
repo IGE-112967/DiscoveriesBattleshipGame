@@ -16,7 +16,7 @@ public class Position implements IPosition {
     /** Linha da posição no tabuleiro. */
     private int row;
 
-    /** Coluna da posição no tabuleiro. */
+    /** Coluna da posição no tabuleiro.*/
     private int column;
 
     /** Indica se a posição está ocupada por um navio. */
