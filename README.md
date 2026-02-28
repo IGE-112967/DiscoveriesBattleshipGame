@@ -1,5 +1,6 @@
 # Battleship Project
 
+Teste para Pratique os comandos: git init, clone, add, commit, push, pull
 
 (Perguntas Teóricas)
 Pergunta 1 — Pull request, merge e o grafo
