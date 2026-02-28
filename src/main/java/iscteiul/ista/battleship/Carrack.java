@@ -39,9 +39,9 @@ public class Carrack extends Ship {
     }
 
     /**
-     * Gets the dimension (size) of the Carrack.
+     * Obtém a dimensão (tamanho) da Nau.
      *
-     * @return the number of squares the ship occupies on the board (in this case, 3)
+     * @return o número de quadrados que o navio ocupa no tabuleiro (neste caso, 3)
      */
     @Override
     public Integer getSize() {

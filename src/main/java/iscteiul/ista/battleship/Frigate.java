@@ -9,7 +9,15 @@ package iscteiul.ista.battleship;
  * @see Ship
  */
 public class Frigate extends Ship {
+    
+    /**
+     * Tamanho fixo da Fragata (4 unidades).
+     */
     private static final Integer SIZE = 4;
+    
+    /**
+     * Nome identificador do tipo de navio.
+     */
     private static final String NAME = "Fragata";
 
     /**
@@ -22,14 +30,21 @@ public class Frigate extends Ship {
      */
     public Frigate(Compass bearing, IPosition pos) throws IllegalArgumentException {
         super(Frigate.NAME, bearing, pos);
+        
+        if (bearing == null) {
+            throw new IllegalArgumentException("ERROR! bearing cannot be null");
+        }
+
         switch (bearing) {
             case NORTH:
             case SOUTH:
+                // Estende o navio verticalmente
                 for (int r = 0; r < SIZE; r++)
                     getPositions().add(new Position(pos.getRow() + r, pos.getColumn()));
                 break;
             case EAST:
             case WEST:
+                // Estende o navio horizontalmente
                 for (int c = 0; c < SIZE; c++)
                     getPositions().add(new Position(pos.getRow(), pos.getColumn() + c));
                 break;
