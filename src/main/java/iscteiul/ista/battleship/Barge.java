@@ -1,27 +1,23 @@
 package iscteiul.ista.battleship;
 
 /**
- * Represents a Barge ship in the Discoveries Battleship game.
+ * Represents a Barge (Barca) ship in the Discoveries Battleship game.
  * <p>
- * A Barge is the smallest ship in the fleet and occupies a single
- * position on the board.
+ * The Barge is the smallest ship, occupying only 1 square on the game board.
  * </p>
- * 
- * Size: 1 cell
+ *
+ * @see Ship
  */
 public class Barge extends Ship {
-
-    /** Size of the Barge ship (number of occupied cells). */
     private static final Integer SIZE = 1;
-
-    /** Display name of the ship. */
     private static final String NAME = "Barca";
 
     /**
-     * Constructs a Barge ship.
+     * Constructs a new Barge instance.
+     * Since the Barge size is 1, it occupies a single position defined by 'pos'.
      *
-     * @param bearing the orientation of the ship (horizontal or vertical)
-     * @param pos the initial (upper-left) position of the ship on the board
+     * @param bearing the orientation of the ship (less relevant for size 1, but required by the hierarchy)
+     * @param pos     the position (coordinate) of the barge on the board
      */
     public Barge(Compass bearing, IPosition pos) {
         super(Barge.NAME, bearing, pos);
@@ -29,12 +25,13 @@ public class Barge extends Ship {
     }
 
     /**
-     * Returns the size of the Barge.
+     * Gets the dimension (size) of the Barge.
      *
-     * @return the number of board cells occupied by this ship (always 1)
+     * @return the number of squares the ship occupies on the board (in this case, 1)
      */
     @Override
     public Integer getSize() {
         return SIZE;
     }
+
 }
