@@ -1,52 +1,55 @@
 package iscteiul.ista.battleship;
 
 /**
- * Representa os pontos cardeais usados para definir a orientação (direção) 
- * dos navios na grelha do jogo da Batalha Naval.
+ * Represents the cardinal points (directions) used for ship orientation and navigation in the game.
  * <p>
- * As direções são mapeadas internamente por caracteres, considerando as iniciais 
- * adaptadas para o contexto do jogo (ex: 'n' para Norte, 's' para Sul, 'e' para Este/East, 'o' para Oeste/West).
+ * This enum maps directions to specific characters:
+ * <ul>
+ * <li>NORTH -> 'n'</li>
+ * <li>SOUTH -> 's'</li>
+ * <li>EAST -> 'e'</li>
+ * <li>WEST -> 'o' (derived from the Portuguese "Oeste")</li>
+ * </ul>
  * </p>
- * * @author fba
+ *
+ * @author fba
  */
 public enum Compass {
-
-    /** Aponta para o Norte (cima na grelha). Representado por 'n'. */
-    NORTH('n'), 
-    
-    /** Aponta para o Sul (baixo na grelha). Representado por 's'. */
-    SOUTH('s'), 
-    
-    /** Aponta para o Este (direita na grelha). Representado por 'e'. */
-    EAST('e'), 
-    
-    /** Aponta para o Oeste (esquerda na grelha). Representado por 'o'. */
-    WEST('o'), 
-    
-    /** Direção desconhecida ou inválida. Representado por 'u' (unknown). */
+    /** Direction North ('n'). */
+    NORTH('n'),
+    /** Direction South ('s'). */
+    SOUTH('s'),
+    /** Direction East ('e'). */
+    EAST('e'),
+    /** Direction West ('o' - from "Oeste"). */
+    WEST('o'),
+    /** Unknown or invalid direction ('u'). */
     UNKNOWN('u');
 
     private final char c;
 
     /**
-     * Construtor do enumerado. Associa um caractere específico à direção.
-     * * @param c o caractere que representa a direção correspondente
+     * Constructor associating a character code with the direction.
+     *
+     * @param c the character representation of the direction
      */
     Compass(char c) {
         this.c = c;
     }
 
     /**
-     * Obtém o caractere identificador da direção.
-     * * @return o caractere associado (ex: 'n', 's', 'e', 'o', 'u')
+     * Gets the character associated with this direction.
+     *
+     * @return the char code (e.g., 'n', 's', 'e', 'o')
      */
     public char getDirection() {
         return c;
     }
 
     /**
-     * Retorna a representação textual do caractere da direção.
-     * * @return uma string contendo o caractere representativo
+     * Returns the string representation of the direction's character.
+     *
+     * @return a string containing the direction character
      */
     @Override
     public String toString() {
@@ -54,9 +57,14 @@ public enum Compass {
     }
 
     /**
-     * Converte um caractere na sua respetiva constante {@link Compass}.
-     * * @param ch o caractere a converter (espera-se 'n', 's', 'e', ou 'o')
-     * @return a constante {@link Compass} correspondente, ou {@link #UNKNOWN} se o caractere for inválido
+     * Converts a character into the corresponding Compass enum constant.
+     * <p>
+     * Accepts 'n', 's', 'e', 'o'.
+     * Returns {@link #UNKNOWN} if the character does not match any valid direction.
+     * </p>
+     *
+     * @param ch the character to convert
+     * @return the corresponding Compass constant, or UNKNOWN
      */
     static Compass charToCompass(char ch) {
         Compass bearing;

@@ -1,26 +1,24 @@
-/**
- *
- */
 package iscteiul.ista.battleship;
 
 /**
- * Representa um navio do tipo Nau (Carrack) no jogo da Batalha Naval dos Descobrimentos.
+ * Represents a Carrack (Nau) ship in the Discoveries Battleship game.
  * <p>
- * A Nau tem uma dimensão de 3 quadrados na grelha do jogo.
+ * The Carrack has a size of 3 squares on the game board.
  * </p>
- * * @see Ship
+ *
+ * @see Ship
  */
 public class Carrack extends Ship {
     private static final Integer SIZE = 3;
     private static final String NAME = "Nau";
 
     /**
-     * Constrói uma nova instância de uma Nau (Carrack) com uma orientação e posição inicial específicas.
-     * Calcula automaticamente todas as posições ocupadas pelo navio na grelha com base na sua dimensão (3).
+     * Constructs a new Carrack instance with a specific bearing and initial position.
+     * Automatically calculates all the grid positions occupied by the ship based on its size (3).
      *
-     * @param bearing a orientação do navio na grelha (ex: NORTH, SOUTH para vertical; EAST, WEST para horizontal)
-     * @param pos a posição inicial (coordenadas de proa/popa) do navio no tabuleiro
-     * @throws IllegalArgumentException se a orientação fornecida for inválida ou não reconhecida
+     * @param bearing the orientation of the ship on the grid (e.g., NORTH, SOUTH for vertical; EAST, WEST for horizontal)
+     * @param pos the initial position (bow/stern coordinates) of the ship on the board
+     * @throws IllegalArgumentException if the provided bearing is invalid or unrecognized
      */
     public Carrack(Compass bearing, IPosition pos) throws IllegalArgumentException {
         super(Carrack.NAME, bearing, pos);

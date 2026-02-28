@@ -1,11 +1,12 @@
 package iscteiul.ista.battleship;
 
 /**
- * Representa uma Fragata (Frigate) no jogo BattleShip.
- * A Fragata é um tipo de navio com um tamanho fixo de 4 unidades,
- * ocupando posições consecutivas no tabuleiro baseadas na sua orientação.
- * * @author [O Teu Nome/Grupo]
- * @version 1.0
+ * Represents a Frigate (Fragata) ship in the Discoveries Battleship game.
+ * <p>
+ * The Frigate has a size of 4 squares on the game board.
+ * </p>
+ *
+ * @see Ship
  */
 public class Frigate extends Ship {
     
@@ -20,12 +21,12 @@ public class Frigate extends Ship {
     private static final String NAME = "Fragata";
 
     /**
-     * Constrói uma nova Fragata com uma orientação e posição inicial específicas.
-     * Dependendo da orientação (bearing), as posições ocupadas pelo navio são 
-     * calculadas e adicionadas à lista de posições do navio.
-     * * @param bearing A orientação do navio (NORTH, SOUTH, EAST, WEST).
-     * @param pos A posição inicial (âncora) a partir da qual o navio se estende.
-     * @throws IllegalArgumentException Se a orientação fornecida for inválida ou nula.
+     * Constructs a new Frigate instance with a specific bearing and initial position.
+     * Automatically calculates the 4 grid positions occupied by the ship based on its orientation.
+     *
+     * @param bearing the orientation of the ship (e.g., NORTH, SOUTH, EAST, WEST)
+     * @param pos     the initial position (bow/stern coordinates) of the ship on the board
+     * @throws IllegalArgumentException if the provided bearing is invalid or unrecognized
      */
     public Frigate(Compass bearing, IPosition pos) throws IllegalArgumentException {
         super(Frigate.NAME, bearing, pos);
@@ -53,9 +54,9 @@ public class Frigate extends Ship {
     }
 
     /**
-     * Devolve o tamanho fixo da Fragata.
-     * * @return O número de células que o navio ocupa (4).
-     * @see iscteiul.ista.battleship.Ship#getSize()
+     * Gets the dimension (size) of the Frigate.
+     *
+     * @return the number of squares the ship occupies on the board (in this case, 4)
      */
     @Override
     public Integer getSize() {
