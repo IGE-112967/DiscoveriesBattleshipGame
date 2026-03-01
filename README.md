@@ -2,34 +2,35 @@
 
 Teste para Pratique os comandos: git init, clone, add, commit, push, pull
 
-(Perguntas Teóricas)
-Pergunta 1 — Pull request, merge e o grafo
+(Preguntas Teóricas)
 
-Pergunta: Veja o que aconteceu no grafo… comente o que viu no grafo, isto é, o que resultou do pull request e do merge.
+Pregunta 1 — Pull request, merge y el grafo
 
-Resposta: 
-No grafo de rede vê-se que o ramo do pull request foi criado a partir do main, ficando a linha do main e a linha do ramo separadas a partir de um certo commit; depois aparecem commits feitos no ramo do PR em paralelo, até que, quando o pull request é processado e feito o merge, as duas linhas voltam a convergir no main, normalmente através de um merge commit. O resultado é que as alterações do ramo do PR passam a fazer parte do histórico do main.
+Pregunta: Observe lo que ocurrió en el grafo… comente lo que vio en el grafo, es decir, qué resultó del pull request y del merge.
 
-Pergunta 2 — Product Owner e Product Backlog
+Respuesta:
+En el grafo de red se ve que la rama del pull request fue creada a partir de main, quedando la línea de main y la línea de la rama separadas a partir de un determinado commit; después aparecen commits realizados en la rama del PR en paralelo, hasta que, cuando el pull request es procesado y se hace el merge, las dos líneas vuelven a converger en main, normalmente a través de un merge commit. El resultado es que los cambios de la rama del PR pasan a formar parte del historial de main.
 
-Pergunta: Considere que é o Product Owner dessa app. Que requisitos adicionais lhe faltam? Qual deverá ser o Product Backlog?
+Pregunta 2 — Product Owner y Product Backlog
 
-Resposta: 
-Para além do básico, o backlog deve incluir: validações na colocação da frota (sem sobreposição, sem contacto, apenas horizontal/vertical e dentro do tabuleiro), gestão do turno com a regra dos 3 tiros, validação de jogadas (sem tiros repetidos/fora do tabuleiro), deteção de navios afundados e fim de jogo, visualização correta (tabuleiro próprio completo e do adversário apenas com acertos/água), persistência consistente em JSON (guardar e retomar), e melhorias de usabilidade (mensagens claras/ajuda, e opcionalmente IA e estatísticas).
+Pregunta: Considere que usted es el Product Owner de esa app. ¿Qué requisitos adicionales le faltan? ¿Cuál debería ser el Product Backlog?
 
-Pergunta 3 — GitHub Issues no Scrum (assumir, concluir, desistir)
+Respuesta:
+Además de lo básico, el backlog debe incluir: validaciones en la colocación de la flota (sin superposición, sin contacto, solo horizontal/vertical y dentro del tablero), gestión del turno con la regla de los 3 disparos, validación de jugadas (sin disparos repetidos/fuera del tablero), detección de barcos hundidos y fin de la partida, visualización correcta (tablero propio completo y el del adversario solo con aciertos/agua), persistencia consistente en JSON (guardar y retomar), y mejoras de usabilidad (mensajes claros/ayuda, y opcionalmente IA y estadísticas).
 
-Pergunta: Na daily escolhe uma user story. O que fazer no GitHub? E depois para indicar implementada? E se o PO desistir?
+Pregunta 3 — GitHub Issues en Scrum (asumir, concluir, desistir)
 
-Resposta:
-Para assumir uma user story, seleciona-se uma issue aberta e regista-se um comentário na própria issue a indicar que foi assumida (e atribui-se ao respetivo elemento, se usarem assignees). Quando estiver concluída, volta-se à issue e comenta-se que foi implementada, referindo o pull request/commit, e a issue é fechada após o merge (ou manualmente). Se o PO desistir, regista-se a decisão com um comentário na issue e fecha-se a issue para assinalar que foi cancelada/adiada.
+Pregunta: En la daily eliges una user story. ¿Qué hacer en GitHub? ¿Y después para indicar que está implementada? ¿Y si el PO desiste?
 
-Pergunta 4 — Web vs IDE
+Respuesta:
+Para asumir una user story, se selecciona una issue abierta y se registra un comentario en la propia issue indicando que ha sido asumida (y se asigna al respectivo miembro, si usan assignees). Cuando esté concluida, se vuelve a la issue y se comenta que ha sido implementada, haciendo referencia al pull request/commit, y la issue se cierra después del merge (o manualmente). Si el PO desiste, se registra la decisión con un comentario en la issue y se cierra la issue para señalar que ha sido cancelada/aplazada.
 
-Pergunta: Diferenças entre trabalhar via web e via IDE? Em que situações é preferível cada abordagem?
+Pregunta 4 — Web vs IDE
 
-Resposta:
-Via web (GitHub) é mais adequado para coordenação e colaboração: gestão de issues, acompanhamento do trabalho, discussão e code review em pull requests. Via IDE é mais adequado para desenvolvimento: escrever/refatorar código, correr e depurar, executar testes e resolver conflitos de merge, sendo preferível para alterações maiores antes de submeter um PR.
+Pregunta: ¿Diferencias entre trabajar vía web y vía IDE? ¿En qué situaciones es preferible cada enfoque?
+
+Respuesta:
+Vía web (GitHub) es más adecuado para la coordinación y la colaboración: gestión de issues, seguimiento del trabajo, discusión y code review en pull requests. Vía IDE es más adecuado para el desarrollo: escribir/refactorizar código, ejecutar y depurar, correr pruebas y resolver conflictos de merge, siendo preferible para cambios mayores antes de enviar un PR.
 
 ---
 
