@@ -1,35 +1,59 @@
 # Battleship Project
 
 
-(Perguntas Teóricas)
-Pergunta 1 — Pull request, merge e o grafo
+(Domande Teoriche)
+Domanda 1 — Pull request, merge e il grafo
 
-Pergunta: Veja o que aconteceu no grafo… comente o que viu no grafo, isto é, o que resultou do pull request e do merge.
+Domanda:
+Osserva ciò che è accaduto nel grafo… commenta ciò che hai visto nel grafo, cioè il risultato della pull request e del merge.
 
-Resposta: 
-No grafo de rede vê-se que o ramo do pull request foi criado a partir do main, ficando a linha do main e a linha do ramo separadas a partir de um certo commit; depois aparecem commits feitos no ramo do PR em paralelo, até que, quando o pull request é processado e feito o merge, as duas linhas voltam a convergir no main, normalmente através de um merge commit. O resultado é que as alterações do ramo do PR passam a fazer parte do histórico do main.
+Risposta:
+Nel grafo della rete si vede che il ramo della pull request è stato creato a partire dal main, lasciando la linea del main e quella del ramo separate a partire da un certo commit; successivamente compaiono commit effettuati nel ramo della PR in parallelo, finché, quando la pull request viene elaborata ed eseguito il merge, le due linee tornano a convergere nel main, normalmente attraverso un merge commit.
+Il risultato è che le modifiche del ramo della PR diventano parte della cronologia del main.
 
-Pergunta 2 — Product Owner e Product Backlog
+Domanda 2 — Product Owner e Product Backlog
 
-Pergunta: Considere que é o Product Owner dessa app. Que requisitos adicionais lhe faltam? Qual deverá ser o Product Backlog?
+Domanda:
+Considera di essere il Product Owner di questa applicazione. Quali requisiti aggiuntivi mancano? Quale dovrebbe essere il Product Backlog?
 
-Resposta: 
-Para além do básico, o backlog deve incluir: validações na colocação da frota (sem sobreposição, sem contacto, apenas horizontal/vertical e dentro do tabuleiro), gestão do turno com a regra dos 3 tiros, validação de jogadas (sem tiros repetidos/fora do tabuleiro), deteção de navios afundados e fim de jogo, visualização correta (tabuleiro próprio completo e do adversário apenas com acertos/água), persistência consistente em JSON (guardar e retomar), e melhorias de usabilidade (mensagens claras/ajuda, e opcionalmente IA e estatísticas).
+Risposta:
+Oltre alle funzionalità di base, il backlog dovrebbe includere:
 
-Pergunta 3 — GitHub Issues no Scrum (assumir, concluir, desistir)
+validazioni nel posizionamento della flotta (senza sovrapposizioni, senza contatto tra navi, solo orizzontale/verticale e all’interno della griglia);
 
-Pergunta: Na daily escolhe uma user story. O que fazer no GitHub? E depois para indicar implementada? E se o PO desistir?
+gestione del turno con la regola dei 3 colpi;
 
-Resposta:
-Para assumir uma user story, seleciona-se uma issue aberta e regista-se um comentário na própria issue a indicar que foi assumida (e atribui-se ao respetivo elemento, se usarem assignees). Quando estiver concluída, volta-se à issue e comenta-se que foi implementada, referindo o pull request/commit, e a issue é fechada após o merge (ou manualmente). Se o PO desistir, regista-se a decisão com um comentário na issue e fecha-se a issue para assinalar que foi cancelada/adiada.
+validazione delle mosse (niente colpi ripetuti o fuori dalla griglia);
 
-Pergunta 4 — Web vs IDE
+rilevamento delle navi affondate e della fine della partita;
 
-Pergunta: Diferenças entre trabalhar via web e via IDE? Em que situações é preferível cada abordagem?
+visualizzazione corretta (la propria griglia completa e quella dell’avversario solo con colpi riusciti o acqua);
 
-Resposta:
-Via web (GitHub) é mais adequado para coordenação e colaboração: gestão de issues, acompanhamento do trabalho, discussão e code review em pull requests. Via IDE é mais adequado para desenvolvimento: escrever/refatorar código, correr e depurar, executar testes e resolver conflitos de merge, sendo preferível para alterações maiores antes de submeter um PR.
+persistenza coerente in JSON (salvare e riprendere la partita);
 
+miglioramenti di usabilità (messaggi chiari, aiuto per il giocatore, e opzionalmente IA e statistiche).
+
+Domanda 3 — GitHub Issues nello Scrum (assumere, completare, abbandonare)
+
+Domanda:
+Durante la daily scegli una user story. Cosa fare su GitHub? E poi come indicare che è stata implementata? E se il PO decidesse di abbandonarla?
+
+Risposta:
+Per assumere una user story si seleziona una issue aperta e si registra un commento nella stessa issue indicando che è stata presa in carico (assegnandola anche al relativo membro del team, se si utilizzano gli assignees).
+
+Quando il lavoro è concluso, si torna alla issue e si aggiunge un commento indicando che è stata implementata, facendo riferimento alla pull request o al commit. L’issue viene poi chiusa dopo il merge (o manualmente).
+
+Se il Product Owner decide di abbandonarla, si registra la decisione con un commento nella issue e la si chiude per indicare che è stata cancellata o rimandata.
+
+Domanda 4 — Web vs IDE
+
+Domanda:
+Quali sono le differenze tra lavorare via web e tramite IDE? In quali situazioni è preferibile ciascun approccio?
+
+Risposta:
+Lavorare via web (GitHub) è più adatto per il coordinamento e la collaborazione: gestione delle issue, monitoraggio del lavoro, discussione e code review nelle pull request.
+
+Lavorare tramite IDE è più adatto allo sviluppo: scrivere e rifattorizzare codice, eseguire e fare debug del programma, eseguire test e risolvere conflitti di merge. È quindi preferibile per modifiche più consistenti prima di inviare una pull request.
 ---
 
 ## 🌊 Índice
