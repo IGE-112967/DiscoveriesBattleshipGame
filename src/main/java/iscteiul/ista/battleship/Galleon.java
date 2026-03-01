@@ -1,36 +1,33 @@
 package iscteiul.ista.battleship;
 
 /**
- * Represents a Galleon ship in the Discoveries Battleship game.
- * <p>
- * The Galleon is a large ship with a fixed size of 5 units.
- * Unlike linear ships, the Galleon occupies a specific geometric structure
- * that extends across multiple rows and columns, depending on its orientation.
- * </p>
- *
+ * Representa um Galeão (Galleon) no jogo BattleShip.
+ * O Galeão é um navio de grande porte com um tamanho fixo de 5 unidades.
+ * Ao contrário de navios lineares, o Galeão ocupa uma estrutura geométrica específica 
+ * que se estende por múltiplas linhas e colunas, dependendo da sua orientação.
+ * * @author [O Teu Nome/Grupo]
  * @version 1.0
  */
 public class Galleon extends Ship {
-
+    
     /**
-     * Fixed size of the Galleon (5 units).
+     * Tamanho fixo do Galeão (5 unidades).
      */
     private static final Integer SIZE = 5;
-
+    
     /**
-     * Identifier name of the ship type.
+     * Nome identificador do tipo de navio.
      */
     private static final String NAME = "Galeao";
 
     /**
-     * Constructs a new Galleon with a specific orientation and initial position.
-     * The method calculates the 5 positions occupied by the ship based on the
-     * provided {@code bearing}.
-     *
-     * @param bearing The orientation of the ship (NORTH, SOUTH, EAST, WEST).
-     * @param pos     The reference position (anchor) for placement.
-     * @throws IllegalArgumentException If the bearing is invalid.
-     * @throws NullPointerException     If the bearing is null.
+     * Constrói um novo Galeão com uma orientação e posição inicial específicas.
+     * O método calcula as 5 posições ocupadas pelo navio com base no 
+     * {@code bearing} fornecido.
+     * * @param bearing A orientação do navio (NORTH, SOUTH, EAST, WEST).
+     * @param pos A posição de referência (âncora) para o posicionamento.
+     * @throws IllegalArgumentException Se a orientação for inválida.
+     * @throws NullPointerException Se a orientação (bearing) for nula.
      */
     public Galleon(Compass bearing, IPosition pos) throws IllegalArgumentException {
         super(Galleon.NAME, bearing, pos);
@@ -57,10 +54,9 @@ public class Galleon extends Ship {
     }
 
     /**
-     * Returns the fixed size of the Galleon.
-     *
-     * @return The number of occupied cells (5).
-     * @see Ship#getSize()
+     * Devolve o tamanho fixo do Galeão.
+     * * @return O número de células ocupadas (5).
+     * @see iscteiul.ista.battleship.Ship#getSize()
      */
     @Override
     public Integer getSize() {
@@ -68,9 +64,8 @@ public class Galleon extends Ship {
     }
 
     /**
-     * Fills the ship positions when oriented towards North.
-     *
-     * @param pos Initial position.
+     * Preenche as posições do navio quando orientado para Norte.
+     * @param pos Posição inicial.
      */
     private void fillNorth(IPosition pos) {
         for (int i = 0; i < 3; i++) {
@@ -81,9 +76,8 @@ public class Galleon extends Ship {
     }
 
     /**
-     * Fills the ship positions when oriented towards South.
-     *
-     * @param pos Initial position.
+     * Preenche as posições do navio quando orientado para Sul.
+     * @param pos Posição inicial.
      */
     private void fillSouth(IPosition pos) {
         for (int i = 0; i < 2; i++) {
@@ -95,9 +89,8 @@ public class Galleon extends Ship {
     }
 
     /**
-     * Fills the ship positions when oriented towards East.
-     *
-     * @param pos Initial position.
+     * Preenche as posições do navio quando orientado para Este.
+     * @param pos Posição inicial.
      */
     private void fillEast(IPosition pos) {
         getPositions().add(new Position(pos.getRow(), pos.getColumn()));
@@ -108,9 +101,8 @@ public class Galleon extends Ship {
     }
 
     /**
-     * Fills the ship positions when oriented towards West.
-     *
-     * @param pos Initial position.
+     * Preenche as posições do navio quando orientado para Oeste.
+     * @param pos Posição inicial.
      */
     private void fillWest(IPosition pos) {
         getPositions().add(new Position(pos.getRow(), pos.getColumn()));
