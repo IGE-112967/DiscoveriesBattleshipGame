@@ -1,59 +1,34 @@
 # Battleship Project
 
+(Theoretical Questions)
 
-(Domande Teoriche)
-Domanda 1 — Pull request, merge e il grafo
+Question 1 — Pull request, merge, and the graph
 
-Domanda:
-Osserva ciò che è accaduto nel grafo… commenta ciò che hai visto nel grafo, cioè il risultato della pull request e del merge.
+Question: Look at what happened in the graph... comment on what you saw in the graph, i.e., what resulted from the pull request and the merge.
 
-Risposta:
-Nel grafo della rete si vede che il ramo della pull request è stato creato a partire dal main, lasciando la linea del main e quella del ramo separate a partire da un certo commit; successivamente compaiono commit effettuati nel ramo della PR in parallelo, finché, quando la pull request viene elaborata ed eseguito il merge, le due linee tornano a convergere nel main, normalmente attraverso un merge commit.
-Il risultato è che le modifiche del ramo della PR diventano parte della cronologia del main.
+Answer:
+In the network graph, it is visible that the pull request branch was created from main, with the main line and the branch line diverging after a specific commit. Then, commits made on the PR branch appear in parallel until, when the pull request is processed and the merge is performed, the two lines converge back into main, usually through a merge commit. The result is that the changes from the PR branch become part of the main history.
 
-Domanda 2 — Product Owner e Product Backlog
+Question 2 — Product Owner and Product Backlog
 
-Domanda:
-Considera di essere il Product Owner di questa applicazione. Quali requisiti aggiuntivi mancano? Quale dovrebbe essere il Product Backlog?
+Question: Consider you are the Product Owner of this app. What additional requirements are missing? What should the Product Backlog contain?
 
-Risposta:
-Oltre alle funzionalità di base, il backlog dovrebbe includere:
+Answer:
+Beyond the basics, the backlog should include: fleet placement validations (no overlap, no adjacency/touching, only horizontal/vertical, and within board limits), turn management with the 3-shot rule, move validation (no repeated shots or out-of-bounds shots), detection of sunken ships and game over conditions, correct visualization (full own board and opponent's board showing only hits/misses), consistent JSON persistence (save and resume game), and usability improvements (clear messages/help, and optionally AI and statistics).
 
-validazioni nel posizionamento della flotta (senza sovrapposizioni, senza contatto tra navi, solo orizzontale/verticale e all’interno della griglia);
+Question 3 — GitHub Issues in Scrum (picking up, completing, dropping)
 
-gestione del turno con la regola dei 3 colpi;
+Question: During the daily meeting, you pick a user story. What do you do on GitHub? And later to indicate it is implemented? And if the PO drops the story?
 
-validazione delle mosse (niente colpi ripetuti o fuori dalla griglia);
+Answer:
+To take on a user story, you select an open issue and post a comment on the issue itself indicating it has been picked up (and assign it to the respective member, if using assignees). When it is completed, you return to the issue and comment that it has been implemented, referencing the pull request/commit hash, and the issue is closed after the merge (or manually). If the PO decides to drop the story, the decision is recorded with a comment on the issue, and the issue is closed to signal it was cancelled/postponed.
 
-rilevamento delle navi affondate e della fine della partita;
+Question 4 — Web vs. IDE
 
-visualizzazione corretta (la propria griglia completa e quella dell’avversario solo con colpi riusciti o acqua);
+Question: Differences between working via the web and via an IDE? In which situations is each approach preferable?
 
-persistenza coerente in JSON (salvare e riprendere la partita);
-
-miglioramenti di usabilità (messaggi chiari, aiuto per il giocatore, e opzionalmente IA e statistiche).
-
-Domanda 3 — GitHub Issues nello Scrum (assumere, completare, abbandonare)
-
-Domanda:
-Durante la daily scegli una user story. Cosa fare su GitHub? E poi come indicare che è stata implementata? E se il PO decidesse di abbandonarla?
-
-Risposta:
-Per assumere una user story si seleziona una issue aperta e si registra un commento nella stessa issue indicando che è stata presa in carico (assegnandola anche al relativo membro del team, se si utilizzano gli assignees).
-
-Quando il lavoro è concluso, si torna alla issue e si aggiunge un commento indicando che è stata implementata, facendo riferimento alla pull request o al commit. L’issue viene poi chiusa dopo il merge (o manualmente).
-
-Se il Product Owner decide di abbandonarla, si registra la decisione con un commento nella issue e la si chiude per indicare che è stata cancellata o rimandata.
-
-Domanda 4 — Web vs IDE
-
-Domanda:
-Quali sono le differenze tra lavorare via web e tramite IDE? In quali situazioni è preferibile ciascun approccio?
-
-Risposta:
-Lavorare via web (GitHub) è più adatto per il coordinamento e la collaborazione: gestione delle issue, monitoraggio del lavoro, discussione e code review nelle pull request.
-
-Lavorare tramite IDE è più adatto allo sviluppo: scrivere e rifattorizzare codice, eseguire e fare debug del programma, eseguire test e risolvere conflitti di merge. È quindi preferibile per modifiche più consistenti prima di inviare una pull request.
+Answer:
+Via web (GitHub) is more suitable for coordination and collaboration: issue management, work tracking, discussions, and code reviews in pull requests.  Via IDE is more suitable for actual development: writing/refactoring code, running and debugging, executing tests, and resolving merge conflicts, being preferable for larger changes before submitting a PR.
 ---
 
 ## 🌊 Índice
