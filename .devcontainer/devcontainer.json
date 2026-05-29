@@ -1,0 +1,36 @@
+{
+  "name": "Batalha Naval - Ambiente de Dev (Java & Maven)",
+
+  // Aponta para o Dockerfile que criámos ao lado
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  // Configurações específicas para os IDEs (IntelliJ e VS Code)
+  "customizations": {
+    "vscode": {
+      // Extensões recomendadas que vão ser instaladas automaticamente no VS Code
+      "extensions": [
+        "vscjava.vscode-java-pack",      // Pacote completo para Java (Debugger, Maven, etc)
+        "ms-azuretools.vscode-docker",    // Suporte para Docker
+        "cschleiden.vscode-github-actions", // Suporte para GitHub Actions
+        "yzhang.markdown-all-in-one"     // Ferramentas para Markdown (para o vosso README.md)
+      ]
+    },
+    "jetbrains": {
+      // Configurações de compatibilidade para o IntelliJ IDEA Ultimate
+      "plugins": [
+        "com.intellij.java",             // Suporte nativo a Java
+        "org.jetbrains.idea.maven",       // Suporte ao Maven
+        "Docker",                        // Integração com o Docker Desktop
+        "com.github.actions"             // Suporte para pipelines de CI/CD do GitHub
+      ]
+    }
+  },
+
+  // Garante que o container corre com um utilizador não-root por segurança (boa prática de ES)
+  "remoteUser": "vscode",
+
+  // Portas que a vossa app pode precisar de expor (ex: se o vosso jogo usar uma API web mais tarde)
+  "forwardPorts": [8080]
+}
