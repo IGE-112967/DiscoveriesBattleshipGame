@@ -1,3 +1,15 @@
+## Docker
+
+Imagem publicada no Docker Hub:
+
+https://hub.docker.com/r/ige112967/battleship-game
+
+Para executar:
+
+docker pull ige112967/battleship-game:latest
+docker run -it --rm ige112967/battleship-game:latest
+
+
 # Battleship Project
 
 (Theoretical Questions)
