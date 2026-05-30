@@ -13,6 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: List files
+        run: |
+          pwd
+          ls -la
+          find . -maxdepth 2 -type f
+
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
@@ -25,11 +31,11 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          username: ige112967
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t ige112967/battleship-game:latest .
+        run: docker build -f ./Dockerfile -t ige112967/battleship-game:latest .
 
       - name: Push Docker image
         run: docker push ige112967/battleship-game:latest
