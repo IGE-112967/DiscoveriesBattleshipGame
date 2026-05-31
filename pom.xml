@@ -20,19 +20,22 @@
     </properties>
 
     <dependencies>
+        <!-- JUnit 5 / Jupiter para os testes unitários -->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.2</version>
             <scope>test</scope>
         </dependency>
 
+        <!-- Log4j API -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>2.25.2</version>
         </dependency>
 
+        <!-- Log4j Core -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
@@ -50,6 +53,13 @@
                 <configuration>
                     <release>17</release>
                 </configuration>
+            </plugin>
+
+            <!-- Plugin necessário para correr testes JUnit 5 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
             </plugin>
 
             <!-- Cria um jar executável com dependências para o Docker -->
@@ -98,7 +108,5 @@
             </plugin>
         </plugins>
     </build>
-
-
 
 </project>
