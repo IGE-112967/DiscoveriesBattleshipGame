@@ -1,18 +1,24 @@
-name: Build and publish Docker image
+name: Complete CI/CD Pipeline
 
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: write
+  security-events: write
+
 jobs:
-  build-and-deploy:
+  complete-pipeline:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Fazer checkout do código
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2. Preparar Java
       - name: Set up Java 17
         uses: actions/setup-java@v4
         with:
@@ -20,17 +26,62 @@ jobs:
           java-version: 17
           cache: maven
 
-      - name: Build jar with Maven
-        run: mvn clean package -Dmaven.test.skip=true
+      # 3. Verificar dependências
+      - name: Verify dependencies
+        run: mvn dependency:resolve
 
+      # 4. Compilar projeto
+      - name: Compile project
+        run: mvn clean compile
+
+      # 5. Executar testes unitários
+      - name: Run unit tests
+        run: mvn test
+
+      # 6. Validar qualidade no SonarCloud / Quality Gate
+      - name: SonarCloud analysis
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          mvn -B verify sonar:sonar \
+            -Dsonar.projectKey=IGE-112967_DiscoveriesBattleshipGame \
+            -Dsonar.organization=ige-112967 \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.token=$SONAR_TOKEN \
+            -Dsonar.qualitygate.wait=true
+
+      # 7. Gerar o ficheiro .jar executável
+      - name: Package application
+        run: mvn clean package -DskipTests
+
+      # 8. Login no Docker Hub
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          username: ige112967
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      # 9. Construir imagem Docker
       - name: Build Docker image
-        run: docker build -t ige112967/battleship-game:latest .
+        run: docker build -f ./Dockerfile -t ige112967/battleship-game:latest .
 
+      # 10. Publicar imagem no Docker Hub
       - name: Push Docker image
         run: docker push ige112967/battleship-game:latest
+
+      # 11. Atualizar documentação Javadoc para GitHub Pages
+      - name: Generate Javadoc
+        run: mvn javadoc:javadoc -Dmaven.javadoc.failOnError=false
+
+      # 12. Garantir que o site principal continua publicado
+      - name: Check GitHub Pages files
+        run: |
+          test -f docs/index.html
+          test -f docs/apidocs/index.html
+
+      # 13. Fazer commit automático da documentação, se houver alterações
+      - name: Commit updated documentation
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update GitHub Pages documentation [skip ci]"
+          file_pattern: docs
